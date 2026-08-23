@@ -1,0 +1,18 @@
+NOTA+ 1.0.1 — PATCH MINIMO PARA O GITHUB
+
+Você NÃO precisa reenviar src/, dist inteiro, nem todos os arquivos.
+
+No repositório GitHub já existente:
+1. Clique em Adicionar arquivo > Fazer upload de arquivos.
+2. Arraste TODO o conteúdo desta pasta PATCH para a área de upload.
+3. O GitHub deverá mostrar atualização/substituição de:
+   - package.json
+   - README.md
+   - public/manifest.json
+   - dist/manifest.json
+   e adição de:
+   - release/NotaPlus-PluginZip-v1.0.1.zip
+4. Faça o commit com a mensagem: Atualiza Nota+ para 1.0.1
+5. Depois envie ao RemNote o arquivo NotaPlus-PluginZip-v1.0.1-FINAL.zip.
+
+O código em src/ NÃO mudou e não precisa ser reenviado.
