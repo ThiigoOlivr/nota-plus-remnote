@@ -1,0 +1,18 @@
+NOTA+ — ARQUIVOS PARA O GITHUB
+
+1. Extraia este ZIP no Windows.
+2. Abra a pasta `nota-plus-remnote-GITHUB`.
+3. No GitHub, abra o repositório:
+   https://github.com/ThiigoOlivr/nota-plus-remnote
+4. Clique em `Adicionar arquivo` > `Fazer upload de arquivos`.
+5. Arraste TODOS os itens de dentro da pasta extraída para a página do GitHub.
+   É importante enviar as pastas `src`, `public`, `dist` e `release`,
+   além de package.json e dos arquivos de configuração.
+6. Faça o commit diretamente na branch principal.
+7. Confira no GitHub se você consegue clicar e abrir:
+   src/widgets/balloon_popup.tsx
+   public/manifest.json
+   dist/manifest.json
+8. Só depois reenvie o plugin pelo RemNote.
+
+NÃO envie `node_modules`.
