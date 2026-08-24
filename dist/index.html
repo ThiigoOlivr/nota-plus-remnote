@@ -1,8 +1,26 @@
-<body></body><script>const urlSearchParams = new URLSearchParams(window.location.search);
-      const queryParams = Object.fromEntries(urlSearchParams.entries());
-      const widgetName = queryParams["widgetName"];
-      if (widgetName == undefined) {document.body.innerHTML+="Widget ID not specified."}
-      const s = document.createElement('script');
-      s.type = "module";
-      s.src = widgetName+"-sandbox.js";
-      document.body.appendChild(s);</script>
+<body></body><script>
+const urlSearchParams = new URLSearchParams(window.location.search);
+const queryParams = Object.fromEntries(urlSearchParams.entries());
+const widgetName = queryParams["widgetName"];
+
+if (widgetName == undefined) {
+  document.body.innerHTML += "Widget ID not specified.";
+} else {
+  const loadScript = () => {
+    const s = document.createElement("script");
+    s.type = "module";
+    s.src = widgetName + "-sandbox.js";
+    document.body.appendChild(s);
+  };
+
+  // Production builds extract each widget stylesheet into a separate file.
+  // Load it before rendering the widget so Marketplace builds keep the same UI
+  // as development builds (which use style-loader).
+  const css = document.createElement("link");
+  css.rel = "stylesheet";
+  css.href = widgetName + "-sandbox.css";
+  css.onload = loadScript;
+  css.onerror = loadScript;
+  document.head.appendChild(css);
+}
+</script>

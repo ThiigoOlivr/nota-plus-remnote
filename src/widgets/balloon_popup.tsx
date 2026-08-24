@@ -161,7 +161,7 @@ function BalloonPopup() {
         <div className="balao-title-wrap">
           <div className="balao-mark">💬</div>
           <div className="balao-header-copy">
-            <h1>Nota+ <span className="balao-version">1.0</span></h1>
+            <h1>Nota+ <span className="balao-version">1.0.2</span></h1>
             <div className="balao-subtitle">Notas e flashcards vinculados ao REM de origem.</div>
           </div>
         </div>

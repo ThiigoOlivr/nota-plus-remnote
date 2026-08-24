@@ -1,4 +1,4 @@
-# Nota+ 1.0 — RemNote Plugin
+# Nota+ 1.0.2 — RemNote Plugin
 
 Plugin contextual para criar notas, flashcards, imagens e pegadinhas vinculados a qualquer REM sem poluir o documento principal.
 
@@ -23,3 +23,7 @@ Use o arquivo `NotaPlus-PluginZip.zip` gerado pelo comando `npm run build` e, no
 
 ## Desenvolvimento futuro
 Para testar alterações futuras, mantenha esta versão estável instalada e use uma cópia separada do código em modo de desenvolvimento.
+
+
+## Hotfix 1.0.2
+Corrige o carregamento do stylesheet dos widgets no build publicado do RemNote Marketplace.

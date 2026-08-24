@@ -53,11 +53,27 @@ const config = {
       const urlSearchParams = new URLSearchParams(window.location.search);
       const queryParams = Object.fromEntries(urlSearchParams.entries());
       const widgetName = queryParams["widgetName"];
-      if (widgetName == undefined) {document.body.innerHTML+="Widget ID not specified."}
-      const s = document.createElement('script');
-      s.type = "module";
-      s.src = widgetName+"${SANDBOX_SUFFIX}.js";
-      document.body.appendChild(s);
+
+      if (widgetName == undefined) {
+        document.body.innerHTML += "Widget ID not specified.";
+      } else {
+        const loadScript = () => {
+          const s = document.createElement('script');
+          s.type = "module";
+          s.src = widgetName+"${SANDBOX_SUFFIX}.js";
+          document.body.appendChild(s);
+        };
+
+        // Production uses MiniCssExtractPlugin, so the stylesheet is a separate
+        // file. Load it explicitly before the widget script. In development,
+        // style-loader handles CSS injection automatically.
+        const css = document.createElement('link');
+        css.rel = "stylesheet";
+        css.href = widgetName+"${SANDBOX_SUFFIX}.css";
+        css.onload = loadScript;
+        css.onerror = loadScript;
+        document.head.appendChild(css);
+      }
       </script>
     `,
       filename: 'index.html',

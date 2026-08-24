@@ -3,7 +3,7 @@
 Nota+ adiciona uma camada contextual a qualquer REM para criar notas, flashcards e conteúdo complementar sem poluir o documento principal.
 
 ## Versão atual
-**1.0.1**
+**1.0.2**
 
 ## Recursos
 - Editor nativo do RemNote dentro do Nota+
@@ -18,9 +18,9 @@ Nota+ adiciona uma camada contextual a qualquer REM para criar notas, flashcards
 
 ## Estrutura
 - `src/` — código-fonte TypeScript/React
-- `public/manifest.json` — manifesto 1.0.1
-- `dist/` — build 1.0.1
-- `release/NotaPlus-PluginZip-v1.0.1.zip` — artefato enviado para revisão
+- `public/manifest.json` — manifesto 1.0.2
+- `dist/` — build 1.0.2
+- `release/NotaPlus-PluginZip-v1.0.2.zip` — artefato enviado para revisão
 - `package.json` — dependências e scripts
 
 ## Desenvolvimento
@@ -40,5 +40,13 @@ O Nota+ não envia conteúdo do usuário para serviços, APIs ou servidores de t
 ## Identidade
 - Nome: **Nota+**
 - ID técnico: `balao`
-- Versão: **1.0.1**
+- Versão: **1.0.2**
 - Repositório: https://github.com/ThiigoOlivr/nota-plus-remnote
+
+
+## Correção 1.0.2
+
+- Corrige o carregamento do CSS dos widgets na versão publicada/Marketplace.
+- O build de produção usa `MiniCssExtractPlugin`, que gera CSS separado do JavaScript.
+- `index.html` agora carrega explicitamente `<widget>-sandbox.css` antes do JavaScript do widget.
+- Atualiza o selo visual do popup para 1.0.2.
