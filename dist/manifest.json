@@ -2,16 +2,16 @@
   "manifestVersion": 1,
   "id": "balao",
   "name": "Nota+",
-  "author": "Local",
+  "author": "ThiagoOliveira",
   "repoUrl": "https://github.com/ThiigoOlivr/nota-plus-remnote",
   "version": {
     "major": 1,
     "minor": 0,
-    "patch": 2
+    "patch": 3
   },
   "theme": [],
   "enableOnMobile": false,
-  "description": "Nota+ adiciona notas e flashcards contextuais a qualquer REM, com editor nativo, integração à fila do documento e ocultação do contexto até revelar a resposta.",
+  "description": "Crie notas e flashcards vinculados a qualquer REM sem poluir seu documento. Editor nativo, fila do documento e contexto na revisão. | Add contextual notes & flashcards to any REM.",
   "requestNative": false,
   "requiredScopes": [
     {

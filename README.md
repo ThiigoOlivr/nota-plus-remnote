@@ -1,52 +1,42 @@
-# Nota+ — RemNote Plugin
+# Nota+
 
-Nota+ adiciona uma camada contextual a qualquer REM para criar notas, flashcards e conteúdo complementar sem poluir o documento principal.
+**Notas e flashcards contextuais sem poluir seus documentos.**
 
-## Versão atual
-**1.0.2**
+O Nota+ adiciona uma camada de conteúdo a qualquer REM. Crie notas, comentários e flashcards relacionados ao conteúdo original sem precisar inserir tudo diretamente no documento principal.
 
-## Recursos
+## Como usar
+
+1. Em qualquer REM, digite `/nota` e selecione **Nota+**.
+2. Use o editor nativo do RemNote para escrever uma nota ou comentário.
+3. Para criar flashcards, use o formato habitual do RemNote: `pergunta >> resposta`.
+4. Use **Criar flashcard** para gerar rapidamente um cartão a partir do REM de origem e depois ajustar a frente e a resposta.
+5. Se desejar, mantenha ativada a opção de ocultar o REM de origem até revelar a resposta.
+
+Os flashcards criados no Nota+ entram na fila de revisão do documento de origem, preservando o contexto de estudo sem poluir o documento principal.
+
+## Recursos principais
+
 - Editor nativo do RemNote dentro do Nota+
-- Flashcards no fluxo normal do RemNote (`pergunta >> resposta`)
-- Integração dos flashcards com a fila do documento de origem
+- Notas e comentários vinculados ao REM de origem
+- Flashcards no formato normal do RemNote (`pergunta >> resposta`)
+- Integração com a fila do documento de origem
+- Criação rápida de flashcard a partir do REM atual
 - Ocultação do REM de origem antes de revelar a resposta
-- Reexibição do contexto após mostrar a resposta
-- Modo de criação de pegadinhas
-- Marcador Nota+ no REM com contador de itens
-- Suporte ao Rich Text do RemNote
+- Reexibição do contexto após revelar a resposta
+- Formatação, referências e imagens pelo editor nativo
 - Rolagem para conteúdos longos
-
-## Estrutura
-- `src/` — código-fonte TypeScript/React
-- `public/manifest.json` — manifesto 1.0.2
-- `dist/` — build 1.0.2
-- `release/NotaPlus-PluginZip-v1.0.2.zip` — artefato enviado para revisão
-- `package.json` — dependências e scripts
-
-## Desenvolvimento
-```bash
-npm install
-npm run dev
-```
-
-## Build
-```bash
-npm run build
-```
+- Marcador **⚡ Nota+** com contador de itens
 
 ## Privacidade
-O Nota+ não envia conteúdo do usuário para serviços, APIs ou servidores de terceiros.
 
-## Identidade
-- Nome: **Nota+**
-- ID técnico: `balao`
-- Versão: **1.0.2**
-- Repositório: https://github.com/ThiigoOlivr/nota-plus-remnote
+O Nota+ funciona dentro do ambiente do RemNote e não envia o conteúdo do usuário para APIs, servidores ou serviços externos.
 
+## English
 
-## Correção 1.0.2
+**Contextual notes and flashcards without cluttering your documents.**
 
-- Corrige o carregamento do CSS dos widgets na versão publicada/Marketplace.
-- O build de produção usa `MiniCssExtractPlugin`, que gera CSS separado do JavaScript.
-- `index.html` agora carrega explicitamente `<widget>-sandbox.css` antes do JavaScript do widget.
-- Atualiza o selo visual do popup para 1.0.2.
+Nota+ lets you attach notes, comments and flashcards to any REM while keeping the original document clean. Use RemNote's native editor, create cards with `question >> answer`, keep them in the source document's review queue, and optionally hide the source REM until the answer is revealed.
+
+## Autor
+
+**ThiagoOliveira**

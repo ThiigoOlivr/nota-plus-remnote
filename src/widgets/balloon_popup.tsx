@@ -122,10 +122,10 @@ function BalloonPopup() {
       await card.setPracticeDirection('forward');
       await card.setEnablePractice(true);
       await refreshCount(data.balloonRootId, data.hostRemId);
-      await plugin.app.toast('Pegadinha criada. Altere a expressão na frente e ajuste a resposta.');
+      await plugin.app.toast('Flashcard criado. Edite a frente e ajuste a resposta.');
     } catch (e) {
       console.error('[Balão pegadinha]', e);
-      await plugin.app.toast('Nota+: não foi possível criar a pegadinha.');
+      await plugin.app.toast('Nota+: não foi possível criar o flashcard.');
     } finally {
       setBusy(false);
     }
@@ -161,7 +161,7 @@ function BalloonPopup() {
         <div className="balao-title-wrap">
           <div className="balao-mark">💬</div>
           <div className="balao-header-copy">
-            <h1>Nota+ <span className="balao-version">1.0.2</span></h1>
+            <h1>Nota+ <span className="balao-version">1.0.3</span></h1>
             <div className="balao-subtitle">Notas e flashcards vinculados ao REM de origem.</div>
           </div>
         </div>
@@ -178,9 +178,9 @@ function BalloonPopup() {
           className="balao-btn balao-btn--trap"
           onClick={() => void addTrapDraft()}
           disabled={busy}
-          title="Copia o REM de origem para você alterar uma expressão e criar uma pegadinha"
+          title="Cria um flashcard a partir do REM de origem para você editar a frente e a resposta"
         >
-          ⚡ Criar pegadinha
+          ⚡ Criar flashcard
         </button>
         <span className="balao-counts">{itemCount} item(ns) neste Nota+</span>
       </section>
